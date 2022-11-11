@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'section_7_getx/3_getx_dialog.dart';
+import 'section_7_getx/4_getx_bottom_sheet.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: GetxDialogPage(),
+      home: GetxBottomSheetPage(),
     );
   }
 }
