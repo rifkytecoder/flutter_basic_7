@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basic_7/controller/6_typedata_rx_controller.dart';
+import 'package:flutter_basic_7/controllers/6_typedata_rx_controller.dart';
 import 'package:get/get.dart';
 
 void main() => runApp(const MyApp());

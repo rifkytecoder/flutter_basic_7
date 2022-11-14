@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 
 class HomeControllerx extends GetxController {
+  // Pilar 1 dari GetX State Management  Reactive dan Simple
   // todo variable ini biar bisa selalu dipantau setiap kali ada perubahan
-
   var dataPantauReactive = 0.obs; // untuk reactive state manager
 
   int dataPantauSimple = 0; // untuk simple state manager

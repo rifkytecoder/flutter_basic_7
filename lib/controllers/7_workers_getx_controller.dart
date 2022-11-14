@@ -5,7 +5,7 @@ class WorkersController extends GetxController {
 
   void change() => dataPantau++;
 
-// Pilar 1 dari GetX
+// Pilar 1 dari GetX - Workers
 // todo Workers untuk menganalisis suatu perubahan/state
   @override
   void onInit() {
