@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basic_7/bindings/11_counter_bindings.dart';
-import 'package:flutter_basic_7/pages/11-getx-binding/counter.dart';
-import 'package:flutter_basic_7/pages/11-getx-binding/home.dart';
+import 'package:flutter_basic_7/pages/12-getx-storage/home.dart';
+import 'package:flutter_basic_7/pages/12-getx-storage/login.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
-void main() => runApp(const MyApp());
+void main() async {
+  GetStorage.init;
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,30 +16,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomeBinding(),
-      // todo Route Management
+      home: LoginPage(),
       getPages: [
-        GetPage(
-          name: '/counter',
-          page: () => CounterPage(),
-          // todo  todo single binding
-          // binding: BindingsBuilder.put(() => CounterController()),
-          // todo class (list) bindings
-          binding: CounterBindings(),
-        ),
-
-        // todo example. jgn dibuat sperti ini tpi buat class binding sendiri
-        //// GetPage(
-        ////   name: '/counter',
-        ////   page: () => CounterPage(),
-        //   // binding: BindingsBuilder.put(() => CounterController()),
-        ////   bindings: [
-        ////     BindingsBuilder.put(() => CounterController()),
-        //     // BindingsBuilder.put(() => AnyController()),
-        //     // BindingsBuilder.put(() => AnyController()),
-        //     // BindingsBuilder.put(() => AnyController()),
-        ////   ]
-        //// ),
+        // route management
+        GetPage(name: '/login', page: () => LoginPage()),
+        GetPage(name: '/home', page: () => HomeStorage()),
       ],
     );
   }
